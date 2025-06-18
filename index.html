@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AniSuki - Anime Streaming</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-container">
+        <!-- Logo -->
+        <div class="logo">
+          <div class="logo-icon">
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 1L10.5 6H13L8.5 9.5L10 15L8 12.5L6 15L7.5 9.5L3 6H5.5L8 1Z"
+                fill="white"
+              />
+            </svg>
+          </div>
+          <div class="logo-text">
+            <span class="logo-ani">Ani</span>
+            <span class="logo-suki">Suki</span>
+          </div>
+        </div>
+
+        <!-- Navigation Links -->
+        <div class="nav-links">
+          <a href="#" class="nav-link active">Home</a>
+          <a href="#" class="nav-link">Browse</a>
+          <a href="#" class="nav-link">History</a>
+          <a href="#" class="nav-link">About</a>
+        </div>
+
+        <!-- Mobile Menu Button & User Avatar -->
+        <div class="nav-right">
+          <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <svg
+              class="hamburger-icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="4" x2="20" y1="12" y2="12"></line>
+              <line x1="4" x2="20" y1="6" y2="6"></line>
+              <line x1="4" x2="20" y1="18" y2="18"></line>
+            </svg>
+            <svg
+              class="close-icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m18 6-12 12"></path>
+              <path d="m6 6 12 12"></path>
+            </svg>
+          </button>
+          <div class="user-avatar">
+            <img
+              src="https://i1.sndcdn.com/artworks-fDy9eYTJKK4FkUsB-Yaaceg-t500x500.jpg"
+              alt="User avatar"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile-menu">
+        <div class="mobile-menu-content">
+          <a href="#" class="mobile-nav-link active">Home</a>
+          <a href="#" class="mobile-nav-link">Browse</a>
+          <a href="#" class="mobile-nav-link">History</a>
+          <a href="#" class="mobile-nav-link">About</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-background">
+        <img
+          src="https://cdn.donmai.us/original/03/fe/03fe391acc12d33719142ba783af11ce.jpg"
+          alt="Anime background"
+        />
+        <div class="hero-overlay"></div>
+      </div>
+
+      <div class="hero-content">
+        <img
+          src="https://th.bing.com/th/id/OIP.4Qz-JgDL8m7f9Sk6oHOC0wHaKX?r=0&rs=1&pid=ImgDetMain"
+          alt="Frieren poster"
+          class="anime-poster"
+        />
+
+        <div class="anime-details">
+          <div class="anime-title">
+            <h1>Frieren: Beyond Journey's End</h1>
+            <p class="anime-subtitle">Sousou no Frieren</p>
+          </div>
+
+          <div class="anime-status">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+              />
+            </svg>
+            <span>9.1 | Finished</span>
+          </div>
+
+          <button class="watch-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            <span>Watch Now</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Tabs -->
+    <section class="content-tabs">
+      <div class="container">
+        <div class="tabs">
+          <button class="tab-btn" onclick="switchTab('overview')">
+            Overview
+          </button>
+          <button class="tab-btn active" onclick="switchTab('episodes')">
+            Episodes
+          </button>
+        </div>
+        <div class="tab-underline"></div>
+      </div>
+    </section>
+
+    <!-- Episodes List -->
+    <section class="episodes-section">
+      <div class="container">
+        <div class="episodes-list">
+          <div class="episode-item">
+            <span class="episode-number">EP: 1</span>
+            <span class="episode-title">The Journey's End</span>
+          </div>
+          <div class="episode-item">
+            <span class="episode-number">EP: 2</span>
+            <span class="episode-title"
+              >It Would Be Embarrassing After All This Time</span
+            >
+          </div>
+          <div class="episode-item">
+            <span class="episode-number">EP: 3</span>
+            <span class="episode-title">The Blue Moon Weed</span>
+          </div>
+          <div class="episode-item">
+            <span class="episode-number">EP: 4</span>
+            <span class="episode-title">The Land Where Souls Rest</span>
+          </div>
+          <div class="episode-item">
+            <span class="episode-number">EP: 5</span>
+            <span class="episode-title">Shooting Stars</span>
+          </div>
+          <div class="episode-item">
+            <span class="episode-number">EP: 6</span>
+            <span class="episode-title">The Village of the Corrupted</span>
+          </div>
+          <div class="episode-item">
+            <span class="episode-number">EP: 7</span>
+            <span class="episode-title">Like a Fairy Tale</span>
+          </div>
+          <div class="episode-item">
+            <span class="episode-number">EP: 8</span>
+            <span class="episode-title">Frieren the Slayer</span>
+          </div>
+          <div class="episode-item">
+            <span class="episode-number">EP: 9</span>
+            <span class="episode-title">The Kein Islands</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendations -->
+    <section class="recommendations">
+      <div class="container">
+        <h2>Recommendations</h2>
+        <div class="anime-grid">
+          <div class="anime-card">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/39429bcff0cf60573ba6abc20022e188abcca262?placeholderIfAbsent=true"
+              alt="Anime poster"
+            />
+            <p>A fragrant flower blooms with dignity</p>
+          </div>
+          <div class="anime-card">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/39429bcff0cf60573ba6abc20022e188abcca262?placeholderIfAbsent=true"
+              alt="Anime poster"
+            />
+            <p>Demon Slayer: Kimetsu no Yaiba</p>
+          </div>
+          <div class="anime-card">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/39429bcff0cf60573ba6abc20022e188abcca262?placeholderIfAbsent=true"
+              alt="Anime poster"
+            />
+            <p>Attack on Titan</p>
+          </div>
+          <div class="anime-card">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/39429bcff0cf60573ba6abc20022e188abcca262?placeholderIfAbsent=true"
+              alt="Anime poster"
+            />
+            <p>Jujutsu Kaisen</p>
+          </div>
+          <div class="anime-card">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/39429bcff0cf60573ba6abc20022e188abcca262?placeholderIfAbsent=true"
+              alt="Anime poster"
+            />
+            <p>My Hero Academia</p>
+          </div>
+          <div class="anime-card">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/39429bcff0cf60573ba6abc20022e188abcca262?placeholderIfAbsent=true"
+              alt="Anime poster"
+            />
+            <p>Chainsaw Man</p>
+          </div>
+          <div class="anime-card">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/39429bcff0cf60573ba6abc20022e188abcca262?placeholderIfAbsent=true"
+              alt="Anime poster"
+            />
+            <p>Spy x Family</p>
+          </div>
+          <div class="anime-card">
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/39429bcff0cf60573ba6abc20022e188abcca262?placeholderIfAbsent=true"
+              alt="Anime poster"
+            />
+            <p>One Piece</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <!-- Footer Logo -->
+          <div class="footer-logo">
+            <div class="footer-logo-icon">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 1L10.5 6H13L8.5 9.5L10 15L8 12.5L6 15L7.5 9.5L3 6H5.5L8 1Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+            <div class="footer-logo-text">
+              <span class="footer-ani">Ani</span>
+              <span class="footer-suki">Suki</span>
+            </div>
+          </div>
+
+          <p class="footer-tagline">This side made for fun.</p>
+
+          <div class="footer-help">
+            <a href="#">Help</a>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">© 2025 AniSuki | Made by Yagami</p>
+
+          <div class="social-media">
+            <img
+              src="https://placehold.co/27x27/4267b2/4267b2"
+              alt="Facebook"
+            />
+            <img
+              src="https://placehold.co/27x27/1da1f2/1da1f2"
+              alt="X (Twitter)"
+            />
+            <img src="https://placehold.co/27x27/7289da/7289da" alt="Discord" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      function toggleMobileMenu() {
+        const mobileMenu = document.querySelector(".mobile-menu");
+        const hamburgerIcon = document.querySelector(".hamburger-icon");
+        const closeIcon = document.querySelector(".close-icon");
+
+        mobileMenu.classList.toggle("open");
+        hamburgerIcon.style.display = mobileMenu.classList.contains("open")
+          ? "none"
+          : "block";
+        closeIcon.style.display = mobileMenu.classList.contains("open")
+          ? "block"
+          : "none";
+      }
+
+      // Tab switching
+      function switchTab(tab) {
+        const tabBtns = document.querySelectorAll(".tab-btn");
+        const underline = document.querySelector(".tab-underline");
+
+        tabBtns.forEach((btn) => btn.classList.remove("active"));
+
+        if (tab === "episodes") {
+          tabBtns[1].classList.add("active");
+          underline.style.left = "180px";
+        } else {
+          tabBtns[0].classList.add("active");
+          underline.style.left = "24px";
+        }
+      }
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", function (event) {
+        const nav = document.querySelector(".nav");
+        const mobileMenu = document.querySelector(".mobile-menu");
+
+        if (
+          !nav.contains(event.target) &&
+          mobileMenu.classList.contains("open")
+        ) {
+          toggleMobileMenu();
+        }
+      });
+
+      // Add scroll effect to navigation
+      window.addEventListener("scroll", function () {
+        const nav = document.querySelector(".nav");
+        if (window.scrollY > 50) {
+          nav.style.background = "rgba(0, 0, 0, 0.95)";
+          nav.style.backdropFilter = "blur(10px)";
+        } else {
+          nav.style.background = "rgba(0, 0, 0, 0.83)";
+          nav.style.backdropFilter = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
